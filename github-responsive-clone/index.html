@@ -48,8 +48,30 @@
     <meta property="twitter:image" content="img/logo__github.png">
     <meta property="twitter:url" content="https://github.com">
 
+    <!--
+    favicon : favorite icon
+    apple-touch-icon : 스마트폰에서 적용되도록 설정
+    shortcut icon
+    - root 에 favicon.ico 파일이 있다면 브라우저가 이것을 우선 탐색 -> 없다면, favicon.png 탐색
+    - 따라서 루트에 ico 파일이 있다면 굳이 설정 안해도 됨
+    -->
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+<!--    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">-->
+
+    <!--
+    webfont : 경량화된 것을 사용해야함
+    대표적 : google fonts
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
+
+    Hello, World!
 
 </body>
 </html>

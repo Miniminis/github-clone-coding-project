@@ -1,1 +1,7 @@
-# github-clone-coding-project
+# github responsive clone coding project
+
+## Reference
+- favicon.ico
+  favicon.png
+  img
+

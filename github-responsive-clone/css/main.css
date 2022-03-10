@@ -43,3 +43,34 @@ BUTTONS
     color : #fff;
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
+
+/* INPUT TEXT */
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+    font-size: 16px;
+}
+
+/* 반대 : blur */
+.input--text:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),
+    0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+/*
+placeholder 색 변경하기
+vendor prefix : 브라우저 업체별 접두사
+- 실험적인 기능을 각 브라우저별로 쓸 수 있다.
+chrome : -webkit-
+firefox : -moz-
+mx : -ms-
+*/
+.input--text::-ms-input-placeholder {
+    color: red;
+}

@@ -8,6 +8,11 @@ COMMON
     color: #333;        /* gray */
 }
 
+a {
+    text-decoration: none;
+}
+
+
 /*
 BUTTONS
 */
@@ -26,6 +31,7 @@ BUTTONS
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -74,3 +80,129 @@ mx : -ms-
 .input--text::-ms-input-placeholder {
     color: red;
 }
+
+/* FLOAT CLEARFIX*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+
+/* SUMMARY */
+.summary {
+
+}
+
+.summary__title {
+
+}
+
+.summary__description {
+
+}
+
+
+/* HEADER */
+header {
+    border-bottom: 1px solid rgba(0,0,0,.75);
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    background: #FFF;       /* 반복되는 문자는 3글자로 축소할 수 있다. */
+    /*height: auto;*/   /*default*/
+}
+
+header .inner {
+    max-width: 980px;
+    height: 78px;
+    margin: 0 auto;     /* width 가 정해져있다면 이 속성으로 가운데 정렬이 가능하다. */
+}
+
+/* 후손선택자 */
+header .menu-group {
+    height: 100%;       /* .inner 의 높이의 영향을 받는다. */
+    display: flex;  /* 수평정렬 : 너비 */
+    align-items: center;    /* 수직정렬 : 높이*/
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-indent: -9999px;       /* 대체택스트 삽입 = img > alt / 9999: 상징적인 의미. 대체택스트의 기업을 사용할때 쓰는 기법이라는 암묵적인 약속 */
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+    display: flex;
+}
+
+header .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: #3c4146;
+}
+
+header .main-menu li a:hover {
+    color: #4078c0;
+}
+
+header .sign-group {
+    display: flex;      /*수평정렬*/
+    height: 100%;
+    align-items: center;
+}
+
+header .btn-group {
+    order: 2;
+    display: flex;
+}
+
+header .btn-group .sign-in {
+    margin-right: 4px;
+}
+
+#search-form {
+    order: 1;
+    margin-right: 10px;
+}
+
+#search {
+    width: 160px;
+    font-size: 14px;
+}
+
+#search + [type="submit"] {
+    display: none;
+}
+
+header .sub-menu {
+    /*order: 0;   !* default : 0 삭제해도 됨*!*/
+    display: flex;
+    margin-right: 10px;
+}
+
+header .sub-menu li a {
+    display: block;
+    padding: 8px;
+    font-size: 13px;
+    color: #3c4146;
+}
+
+
+
